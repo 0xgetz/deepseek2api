@@ -1,0 +1,17 @@
+# secrets and local files
+accounts.txt
+*.log
+
+# build output
+/deepseek2api
+/deepseek2api.exe
+/dist/
+
+# editor / OS
+.idea/
+.vscode/
+.DS_Store
+
+# env files
+.env
+.env.*

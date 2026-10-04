@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="deepseek2api logo">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1220"/>
+      <stop offset="0.55" stop-color="#111c3a"/>
+      <stop offset="1" stop-color="#0a0f1e"/>
+    </linearGradient>
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4f8bff"/>
+      <stop offset="0.5" stop-color="#7c5cff"/>
+      <stop offset="1" stop-color="#26e0c8"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#26e0c8"/>
+      <stop offset="1" stop-color="#4f8bff"/>
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="10" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="soft" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="26"/>
+    </filter>
+  </defs>
+
+  <rect x="16" y="16" width="480" height="480" rx="112" fill="url(#bg)"/>
+  <rect x="16" y="16" width="480" height="480" rx="112" fill="none" stroke="url(#g1)" stroke-opacity="0.55" stroke-width="3"/>
+
+  <!-- ambient glow -->
+  <circle cx="150" cy="160" r="120" fill="#4f8bff" opacity="0.28" filter="url(#soft)"/>
+  <circle cx="372" cy="356" r="130" fill="#26e0c8" opacity="0.22" filter="url(#soft)"/>
+
+  <!-- orbit rings -->
+  <circle cx="256" cy="256" r="150" fill="none" stroke="url(#g1)" stroke-opacity="0.30" stroke-width="2" stroke-dasharray="6 12"/>
+  <circle cx="256" cy="256" r="118" fill="none" stroke="url(#g2)" stroke-opacity="0.22" stroke-width="2"/>
+
+  <!-- stylized whale / flow mark -->
+  <path d="M120 300c26-64 82-104 148-104 52 0 92 22 124 56-30-8-56-6-78 8 26 8 46 24 60 48-42-26-92-30-140-12-44 16-78 42-114 4z"
+        fill="url(#g1)" filter="url(#glow)" opacity="0.95"/>
+  <path d="M144 316c40 26 96 30 150 12" fill="none" stroke="#eaf2ff" stroke-opacity="0.85" stroke-width="7" stroke-linecap="round"/>
+  <circle cx="352" cy="216" r="9" fill="#eaf2ff"/>
+
+  <!-- api brackets -->
+  <path d="M170 210l-34 46 34 46" fill="none" stroke="#eaf2ff" stroke-opacity="0.9" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M342 210l34 46-34 46" fill="none" stroke="#eaf2ff" stroke-opacity="0.9" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- title -->
+  <text x="256" y="432" text-anchor="middle" font-family="'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="52" font-weight="700" fill="#eaf2ff" letter-spacing="1.5">deepseek2api</text>
+</svg>

@@ -1,0 +1,12 @@
+services:
+  deepseek2api:
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      - PORT=8080
+      - PROXY_API_KEY=${PROXY_API_KEY:?请在环境变量中提供 PROXY_API_KEY}
+      - DEEPSEEK_TOKEN=${DEEPSEEK_TOKEN:-}
+    volumes:
+      - ./accounts.txt:/app/accounts.txt:ro
+    restart: unless-stopped
